@@ -4,7 +4,7 @@
   --dim:rgba(245,245,242,0.62);
   --line:rgba(245,245,242,0.16);
   --accent:#d98e2b;
-  --reel-ratio:9/16; /* change to 16/9 if your reels are landscape */
+  --reel-ratio:16/9; /* change to 16/9 if your reels are landscape */
   box-sizing:border-box;
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
