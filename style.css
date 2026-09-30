@@ -179,3 +179,72 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;}
   .track{animation:none;}
   *{transition:none!important;}
 }
+
+/* ===== PHONE / IN-APP BROWSER (Instagram etc). Desktop is untouched. ===== */
+@media(max-width:700px){
+  html{-webkit-text-size-adjust:100%;overflow-x:hidden;}
+  .wrap{padding:0 20px;}
+
+  /* Nav: no blend mode (unreliable in in-app browsers), scrolls away instead of floating over content */
+  nav{
+    position:absolute;mix-blend-mode:normal;
+    padding:calc(16px + env(safe-area-inset-top,0px)) 20px 0;
+    background:linear-gradient(180deg,rgba(11,11,11,0.55),rgba(11,11,11,0));
+    padding-bottom:28px;
+  }
+  .logo{font-size:1.15rem;}
+  .navlinks{gap:22px;}
+  .navcol{gap:8px;}
+  .navlinks a{font-size:0.72rem;}
+
+  /* Hero */
+  .hero{min-height:100vh;min-height:100dvh;}
+  .hero-inner{padding:120px 20px 32px;gap:24px;}
+  .hero h1{font-size:clamp(2.6rem,14vw,4.2rem);line-height:0.9;}
+  .hero-foot p{font-size:0.8rem;max-width:34ch;}
+  .arrow-pill{margin-top:20px;}
+  /* lighter static: no blend mode, so video stays smooth */
+  .hero::after{inset:-120px;mix-blend-mode:normal;opacity:0.1;animation-duration:.7s;}
+
+  /* Spacing */
+  section{padding:64px 0;}
+  .big{font-size:clamp(2.2rem,12vw,3.4rem);margin-bottom:32px;}
+  .statement{font-size:1.6rem;margin-bottom:32px;max-width:none;}
+  .about-grid{gap:36px;}
+  .stats{gap:24px 32px;}
+  .stat b{font-size:1.6rem;}
+  .about-copy p{max-width:none;}
+
+  /* Marquee */
+  .marquee{padding:18px 0;}
+  .track{gap:32px;}
+  .track span::after{margin-left:32px;}
+
+  /* Reels & pricing */
+  .reel-grid{gap:12px;}
+  .tier{padding:28px 20px;}
+  .tier .desc{min-height:0;margin-bottom:16px;}
+  .tier .price{font-size:2.6rem;}
+  .retainers{margin-top:48px;}
+  th,td{padding:14px 4px;font-size:0.9rem;}
+  .addons{margin-top:32px;}
+  .addon{font-size:0.8rem;}
+
+  /* Contact: 16px inputs stop iOS zooming in, full-width tap-friendly button */
+  .contact-grid{gap:32px;}
+  .portrait{aspect-ratio:1/1;}
+  .field input,.field select,.field textarea{font-size:16px;}
+  .inquiry-form .btn{align-self:stretch;text-align:center;padding:16px;}
+  .contact-links{flex-direction:column;gap:14px;margin-top:24px;}
+  .contact-links a{align-self:flex-start;word-break:break-all;}
+
+  /* Footer */
+  footer{padding:48px 0 32px;}
+  .foot-name{font-size:clamp(2.4rem,13vw,3.6rem);}
+  .foot-bottom{margin-top:32px;}
+}
+
+/* Nav links fade out once the About section reaches the top; logo stays */
+.navlinks{transition:opacity .35s ease,visibility .35s ease;}
+nav.links-hidden .navlinks{opacity:0;visibility:hidden;}
+nav.links-hidden .navlinks a{pointer-events:none;}
