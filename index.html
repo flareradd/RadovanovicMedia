@@ -208,5 +208,18 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var nav=document.querySelector('nav'), about=document.getElementById('about');
+  if(!nav||!about) return;
+  function check(){
+    var hide=about.getBoundingClientRect().top<=90;
+    nav.classList.toggle('links-hidden',hide);
+  }
+  window.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('resize',check);
+  check();
+})();
+</script>
 </body>
 </html>
