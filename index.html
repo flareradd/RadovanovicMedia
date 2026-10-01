@@ -39,7 +39,7 @@
     <h1><span>Kaiden</span><span>Radovanovic</span></h1>
     <div class="hero-foot">
       <p>Ideas worth creating. Stories worth sharing. I turn raw footage into reels people actually stop scrolling for.</p>
-      <a href="#work" class="arrow-pill" aria-label="Scroll to showreel">
+      <a href="#about" class="arrow-pill" aria-label="Scroll to about">
         <svg class="a1" width="20" height="28" viewBox="0 0 32 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 2v38M3 28l13 13 13-13"/></svg>
         <svg class="a2" width="20" height="28" viewBox="0 0 32 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 2v38M3 28l13 13 13-13"/></svg>
       </a>
@@ -89,9 +89,15 @@
 
 <section id="contact">
   <div class="wrap contact-grid">
-    <img class="portrait" src="/images/me-portrait.jpg" alt="Kaiden Radovanovic" loading="lazy">
+    <img class="portrait" src="/images/me-portrait.jpg" alt="Kaiden Radovanovic">
     <div>
       <h2 class="big">Get in touch</h2>
+       <div class="link-rows">
+      <a class="link-row" href="mailto:contact@radovanovicmedia.com"><span>contact@radovanovicmedia.com</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M8 6h10v10"/></svg></a>
+      <a class="link-row" href="https://www.instagram.com/kaiden_radovanovic.media/" target="_blank" rel="noopener"><span>Instagram</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M8 6h10v10"/></svg></a>
+      <a class="link-row" href="https://www.linkedin.com/in/kaiden-radovanovic/" target="_blank" rel="noopener"><span>LinkedIn</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M8 6h10v10"/></svg></a>
+    </div>
+    </div>
       <p class="lead">Send a brief, a date, or just a rough idea — I'll follow up with availability and a quote.</p>
 
       <form class="inquiry-form" action="https://formspree.io/f/xvkgwlyw" method="POST">
@@ -99,12 +105,14 @@
           <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
           <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
         </div>
+
         <div class="field">
           <label for="message">Tell me about the project</label>
           <textarea id="message" name="message" rows="4" required></textarea>
         </div>
         <button type="submit" class="btn primary">Send inquiry</button>
       </form>
+    
       
 <footer>
   <div class="wrap">
@@ -118,10 +126,10 @@
 
 <script>
 (function(){
-  var nav=document.querySelector('nav'), work=document.getElementById('work');
-  if(!nav||!work) return;
+  var nav=document.querySelector('nav'), about=document.getElementById('about');
+  if(!nav||!about) return;
   function check(){
-    var hide=work.getBoundingClientRect().top<=90;
+    var hide=about.getBoundingClientRect().top<=90;
     nav.classList.toggle('links-hidden',hide);
   }
   window.addEventListener('scroll',check,{passive:true});
