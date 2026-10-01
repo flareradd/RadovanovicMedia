@@ -118,10 +118,10 @@
 
 <script>
 (function(){
-  var nav=document.querySelector('nav'), about=document.getElementById('about');
-  if(!nav||!about) return;
+  var nav=document.querySelector('nav'), showreel=document.getElementById('showreel');
+  if(!nav||!showreel) return;
   function check(){
-    var hide=about.getBoundingClientRect().top<=90;
+    var hide=showreel.getBoundingClientRect().top<=90;
     nav.classList.toggle('links-hidden',hide);
   }
   window.addEventListener('scroll',check,{passive:true});
