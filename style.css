@@ -123,10 +123,18 @@ section{padding:110px 0;border-top:1px solid var(--line);}
 .reel-video{width:100%;aspect-ratio:var(--reel-ratio);object-fit:cover;background:#000;display:block;}
 
 /* CONTACT */
-.contact-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:64px;align-items:start;}
-@media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:40px;}}
-.portrait{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 15%;display:block;}
-.lead{color:var(--dim);max-width:48ch;margin-bottom:32px;}
+.contact-head{display:flex;align-items:center;gap:48px;margin-bottom:64px;}
+.contact-head .big{margin-bottom:0;}
+.portrait{width:clamp(96px,14vw,170px);aspect-ratio:1/1;border-radius:50%;object-fit:cover;object-position:center 15%;display:block;flex:none;}
+.link-rows{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;}
+.link-row:first-child{grid-column:1/-1;}
+.link-row{display:flex;justify-content:space-between;align-items:center;gap:24px;text-decoration:none;text-transform:uppercase;
+  font-size:clamp(1.3rem,3vw,2.4rem);line-height:1.1;padding:22px 0 20px;border-bottom:3px solid rgba(245,245,242,0.2);transition:border-color .25s,color .25s;}
+.link-row span{min-width:0;overflow-wrap:anywhere;}
+.link-row svg{flex:none;width:clamp(20px,3vw,40px);height:auto;transition:transform .3s cubic-bezier(.2,.7,.2,1);}
+.link-row:hover{border-color:var(--fg);}
+.link-row:hover svg{transform:translate(4px,-4px);}
+.lead{color:var(--dim);max-width:48ch;margin:72px 0 32px;}
 .inquiry-form{display:flex;flex-direction:column;gap:18px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
 @media(max-width:480px){.form-row{grid-template-columns:1fr;}}
@@ -138,8 +146,6 @@ section{padding:110px 0;border-top:1px solid var(--line);}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--fg);}
 .inquiry-form textarea{resize:vertical;}
 .inquiry-form .btn{align-self:flex-start;}
-.contact-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;}
-.contact-links a{text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px;}
 
 /* FOOTER */
 footer{border-top:1px solid var(--line);padding:70px 0 40px;}
