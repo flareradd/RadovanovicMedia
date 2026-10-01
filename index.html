@@ -70,8 +70,8 @@
 
 <section id="about">
   <div class="wrap about-grid">
-    <div>
-      <h2 class="statement">Five years behind the camera, cutting content built for how people actually watch.</h2>
+    <div class="about-photo">
+      <h2 class="statement">Creating content built for how people actually watch.</h2>
       <div class="stats">
         <div class="stat"><b>25+</b><span>Reels filmed &amp; edited</span></div>
         <div class="stat"><b>5+ yrs</b><span>Shooting and editing</span></div>
@@ -80,8 +80,8 @@
     </div>
     <div class="about-copy">
       <h3>About</h3>
-      <p>My name is Kaiden. For the past 5 years I've been behind the camera and in the edit, working on long and short form content and building a style that's punchy, intentional, and made for vertical, fast, engaging viewing.</p>
-      <p>I'm intermediate in experience and just starting to take on outside clients. That means you get sharp, current work at a rate that reflects someone building their client base — not agency pricing for agency polish you don't need yet.</p>
+      <p>My name is Kaiden. For the past 5 years I have grown accustomed to being behind the camera and editing short and long form content, building a style that's punchy, intentional, and made for both vertical and horizontal viewing.</p>
+      <p>I'm intermediate in experience and just starting to take on outside clients. That means you get sharp, current work at a rate that reflects someone building their client base</p>
       <a href="#contact" class="btn primary">Let's chat</a>
     </div>
   </div>
@@ -112,7 +112,8 @@
         </div>
         <button type="submit" class="btn primary">Send inquiry</button>
       </form>
-    
+  </div>
+</section>
       
 <footer>
   <div class="wrap">
@@ -126,10 +127,10 @@
 
 <script>
 (function(){
-  var nav=document.querySelector('nav'), about=document.getElementById('about');
-  if(!nav||!about) return;
+  var nav=document.querySelector('nav'), about=document.getElementById('work');
+  if(!nav||!work) return;
   function check(){
-    var hide=about.getBoundingClientRect().top<=90;
+    var hide=work.getBoundingClientRect().top<=90;
     nav.classList.toggle('links-hidden',hide);
   }
   window.addEventListener('scroll',check,{passive:true});
