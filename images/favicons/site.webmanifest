@@ -1,0 +1,12 @@
+{
+  "name": "Kaiden Radovanovic Media",
+  "short_name": "KRM",
+  "icons": [
+    {"src": "/images/favicons/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/images/favicons/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png"}
+  ],
+  "theme_color": "#0b0b0b",
+  "background_color": "#0b0b0b",
+  "display": "standalone",
+  "start_url": "/"
+}
